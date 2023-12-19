@@ -1,11 +1,4 @@
-[![Logo Image](https://cdn.pteranodon.io/logos/new/pteranodon_logo.png)](https://pteranodon.io)
-
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/pteranodon/panel/laravel.yaml?label=Tests&style=for-the-badge&branch=develop)
-![Discord](https://img.shields.io/discord/122900397965705216?label=Discord&logo=Discord&logoColor=white&style=for-the-badge)
-![GitHub Releases](https://img.shields.io/github/downloads/pteranodon/panel/latest/total?style=for-the-badge)
-![GitHub contributors](https://img.shields.io/github/contributors/pteranodon/panel?style=for-the-badge)
-
-# Pteranodon Panel
+# Pteranodon Panel based on the Pterodactyl Project
 
 Pteranodon® is a free, open-source game server management panel built with PHP, React, and Go. Designed with security 
 in mind, Pteranodon runs all game servers in isolated Docker containers while exposing a beautiful and intuitive
@@ -23,21 +16,6 @@ Stop settling for less. Make game servers a first class citizen on your platform
 * Or, get additional help [via Discord](https://discord.gg/pteranodon)
 
 ## Sponsors
-
-I would like to extend my sincere thanks to the following sponsors for helping fund Pteranodon's development.
-[Interested in becoming a sponsor?](https://github.com/sponsors/matthewpi)
-
-| Company                                                               | About                                                                                                                                                                                                 |
-|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WISP**](https://wisp.gg)                                           | Extra features.                                                                                                                                                                                       |
-| [**Aussie Server Hosts**](https://aussieserverhosts.com/)             | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                       |
-| [**WemX**](https://wemx.net/)                                         | WemX helps automate your hosting company or SaaS business by automating billing, user management, authentication, and much more.                                                                      |
-| [**BisectHosting**](https://www.bisecthosting.com/)                   | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                       |
-| [**MineStrator**](https://minestrator.com/)                           | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                       |
-| [**VibeGAMES**](https://vibegames.net/)                               | VibeGAMES is a game server provider that specializes in DDOS protection for the games we offer. We have multiple locations in the US, Brazil, France, Germany, Singapore, Australia and South Africa. |
-| [**DutchIS**](https://dutchis.net?ref=pteranodon)                    | DutchIS provides instant infrastructure such as pay per use VPS hosting. Start your game hosting journey on DutchIS.                                                                                  |
-| [**Skoali**](https://skoali.com/)                                     | Skoali is a French company that hosts game servers and other types of services (VPS, WEB, Dedicated servers, ...). We also have a free plan for Minecraft and Garry's Mod.                            |
-| [**Rabbit Computing**](https://www.rabbitcomputing.com/link.php?id=5) | Rabbit Computing offers powerful VPS servers, highly available game hosting, and fully unlimited web hosting. Use code README for 20% off your first three months!                                    |
 
 ### Supported Games
 
@@ -70,6 +48,6 @@ and there are plenty more games available provided by the community. Some of the
 
 ## License
 
-Pteranodon® Copyright © 2015 - 2022 Dane Everitt and contributors.
+Pteranodon® Copyright © 2023 Wittyphantom333
 
 Code released under the [MIT License](./LICENSE.md).
