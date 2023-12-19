@@ -26,7 +26,7 @@ const initialValues: Values2 = {
     scheme: 'https',
     behindProxy: 'false',
     public: 'true',
-    daemonBase: '/var/lib/pterodactyl/volumes',
+    daemonBase: '/var/lib/pteranodon/volumes',
 
     listenPortHTTP: 8080,
     publicPortHTTP: 8080,

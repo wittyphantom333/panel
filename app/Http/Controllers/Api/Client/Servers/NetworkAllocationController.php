@@ -1,21 +1,21 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Client\Servers;
+namespace Pteranodon\Http\Controllers\Api\Client\Servers;
 
-use Pterodactyl\Models\Server;
+use Pteranodon\Models\Server;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Facades\Activity;
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Repositories\Eloquent\ServerRepository;
-use Pterodactyl\Transformers\Api\Client\AllocationTransformer;
-use Pterodactyl\Http\Controllers\Api\Client\ClientApiController;
-use Pterodactyl\Services\Allocations\FindAssignableAllocationService;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Network\GetNetworkRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Network\NewAllocationRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Network\DeleteAllocationRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Network\UpdateAllocationRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Network\SetPrimaryAllocationRequest;
+use Pteranodon\Facades\Activity;
+use Pteranodon\Models\Allocation;
+use Pteranodon\Exceptions\DisplayException;
+use Pteranodon\Repositories\Eloquent\ServerRepository;
+use Pteranodon\Transformers\Api\Client\AllocationTransformer;
+use Pteranodon\Http\Controllers\Api\Client\ClientApiController;
+use Pteranodon\Services\Allocations\FindAssignableAllocationService;
+use Pteranodon\Http\Requests\Api\Client\Servers\Network\GetNetworkRequest;
+use Pteranodon\Http\Requests\Api\Client\Servers\Network\NewAllocationRequest;
+use Pteranodon\Http\Requests\Api\Client\Servers\Network\DeleteAllocationRequest;
+use Pteranodon\Http\Requests\Api\Client\Servers\Network\UpdateAllocationRequest;
+use Pteranodon\Http\Requests\Api\Client\Servers\Network\SetPrimaryAllocationRequest;
 
 class NetworkAllocationController extends ClientApiController
 {
@@ -43,8 +43,8 @@ class NetworkAllocationController extends ClientApiController
     /**
      * Set the primary allocation for a server.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Repository\RecordNotFoundException
      */
     public function update(UpdateAllocationRequest $request, Server $server, Allocation $allocation): array
     {
@@ -67,8 +67,8 @@ class NetworkAllocationController extends ClientApiController
     /**
      * Set the primary allocation for a server.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Repository\RecordNotFoundException
      */
     public function setPrimary(SetPrimaryAllocationRequest $request, Server $server, Allocation $allocation): array
     {
@@ -88,7 +88,7 @@ class NetworkAllocationController extends ClientApiController
      * Set the notes for the allocation for a server.
      *s.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Pteranodon\Exceptions\DisplayException
      */
     public function store(NewAllocationRequest $request, Server $server): array
     {
@@ -111,7 +111,7 @@ class NetworkAllocationController extends ClientApiController
     /**
      * Delete an allocation from a server.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Pteranodon\Exceptions\DisplayException
      */
     public function delete(DeleteAllocationRequest $request, Server $server, Allocation $allocation): JsonResponse
     {

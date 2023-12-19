@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Locations;
+namespace Pteranodon\Services\Locations;
 
 use Webmozart\Assert\Assert;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Contracts\Repository\NodeRepositoryInterface;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
-use Pterodactyl\Exceptions\Service\Location\HasActiveNodesException;
+use Pteranodon\Models\Location;
+use Pteranodon\Contracts\Repository\NodeRepositoryInterface;
+use Pteranodon\Contracts\Repository\LocationRepositoryInterface;
+use Pteranodon\Exceptions\Service\Location\HasActiveNodesException;
 
 class LocationDeletionService
 {
@@ -22,7 +22,7 @@ class LocationDeletionService
     /**
      * Delete an existing location.
      *
-     * @throws \Pterodactyl\Exceptions\Service\Location\HasActiveNodesException
+     * @throws \Pteranodon\Exceptions\Service\Location\HasActiveNodesException
      */
     public function handle(Location|int $location): ?int
     {

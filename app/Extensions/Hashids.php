@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Extensions;
+namespace Pteranodon\Extensions;
 
 use Hashids\Hashids as VendorHashids;
-use Pterodactyl\Contracts\Extensions\HashidsInterface;
+use Pteranodon\Contracts\Extensions\HashidsInterface;
 
 class Hashids extends VendorHashids implements HashidsInterface
 {

@@ -1,17 +1,17 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Pteranodon\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
 /**
- * \Pterodactyl\Models\ActivityLogSubject.
+ * \Pteranodon\Models\ActivityLogSubject.
  *
  * @property int $id
  * @property int $activity_log_id
  * @property int $subject_id
  * @property string $subject_type
- * @property \Pterodactyl\Models\ActivityLog|null $activityLog
+ * @property \Pteranodon\Models\ActivityLog|null $activityLog
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $subject
  *
  * @method static \Illuminate\Database\Eloquent\Builder|ActivityLogSubject newModelQuery()

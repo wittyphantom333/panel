@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Pteranodon\Services\Servers;
 
 use Webmozart\Assert\Assert;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
+use Pteranodon\Models\Server;
+use Pteranodon\Repositories\Wings\DaemonServerRepository;
 use Symfony\Component\HttpKernel\Exception\ConflictHttpException;
 
 class SuspensionService
@@ -48,10 +48,10 @@ class SuspensionService
         ]);
 
         try {
-            // Tell wings to re-sync the server state.
+            // Tell buddy to re-sync the server state.
             $this->daemonServerRepository->setServer($server)->sync();
         } catch (\Exception $exception) {
-            // Rollback the server's suspension status if wings fails to sync the server.
+            // Rollback the server's suspension status if buddy fails to sync the server.
             $server->update([
                 'status' => $isSuspending ? null : Server::STATUS_SUSPENDED,
             ]);

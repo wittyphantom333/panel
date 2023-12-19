@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Application;
+namespace Pteranodon\Transformers\Api\Application;
 
-use Pterodactyl\Models\Node;
+use Pteranodon\Models\Node;
 use League\Fractal\Resource\Item;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Resource\NullResource;
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Services\Acl\Api\AdminAcl;
+use Pteranodon\Transformers\Api\Transformer;
 
 class NodeTransformer extends Transformer
 {

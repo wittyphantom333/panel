@@ -3,7 +3,7 @@ version: '3'
 
 services:
   caddy:
-    image: localhost/pterodactyl/development:panel
+    image: localhost/pteranodon/development:panel
     network_mode: host
     command:
       - caddy
@@ -16,7 +16,7 @@ services:
       - laravel
 
   laravel:
-    image: localhost/pterodactyl/development:panel
+    image: localhost/pteranodon/development:panel
     network_mode: host
     command:
       - 'php-fpm'

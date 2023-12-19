@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Servers;
+namespace Pteranodon\Http\Controllers\Api\Application\Servers;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Services\Servers\SuspensionService;
-use Pterodactyl\Services\Servers\ReinstallServerService;
-use Pterodactyl\Http\Requests\Api\Application\Servers\ServerWriteRequest;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Pteranodon\Models\Server;
+use Pteranodon\Services\Servers\SuspensionService;
+use Pteranodon\Services\Servers\ReinstallServerService;
+use Pteranodon\Http\Requests\Api\Application\Servers\ServerWriteRequest;
+use Pteranodon\Http\Controllers\Api\Application\ApplicationApiController;
 
 class ServerManagementController extends ApplicationApiController
 {

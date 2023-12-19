@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Contracts\Repository;
+namespace Pteranodon\Contracts\Repository;
 
 interface ServerVariableRepositoryInterface extends RepositoryInterface
 {

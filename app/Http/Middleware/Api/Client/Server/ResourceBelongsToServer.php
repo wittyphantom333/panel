@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Http\Middleware\Api\Client\Server;
+namespace Pteranodon\Http\Middleware\Api\Client\Server;
 
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Task;
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Backup;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Models\Schedule;
-use Pterodactyl\Models\Allocation;
+use Pteranodon\Models\Task;
+use Pteranodon\Models\User;
+use Pteranodon\Models\Backup;
+use Pteranodon\Models\Server;
+use Pteranodon\Models\Subuser;
+use Pteranodon\Models\Database;
+use Pteranodon\Models\Schedule;
+use Pteranodon\Models\Allocation;
 use Illuminate\Database\Eloquent\Model;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

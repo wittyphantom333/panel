@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Console\Commands;
+namespace Pteranodon\Console\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\VarDumper\VarDumper;
-use Pterodactyl\Services\Telemetry\TelemetryCollectionService;
+use Pteranodon\Services\Telemetry\TelemetryCollectionService;
 
 class TelemetryCommand extends Command
 {
-    protected $description = 'Displays all the data that would be sent to the Pterodactyl Telemetry Service if telemetry collection is enabled.';
+    protected $description = 'Displays all the data that would be sent to the Pteranodon Telemetry Service if telemetry collection is enabled.';
 
     protected $signature = 'p:telemetry';
 
@@ -23,7 +23,7 @@ class TelemetryCommand extends Command
     /**
      * Handle execution of command.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
      */
     public function handle()
     {

@@ -1,29 +1,29 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Pteranodon\Models;
 
-use Pterodactyl\Rules\Username;
-use Pterodactyl\Facades\Activity;
+use Pteranodon\Rules\Username;
+use Pteranodon\Facades\Activity;
 use Illuminate\Support\Collection;
 use Illuminate\Validation\Rules\In;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Builder;
-use Pterodactyl\Models\Traits\HasAccessTokens;
+use Pteranodon\Models\Traits\HasAccessTokens;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Pterodactyl\Traits\Helpers\AvailableLanguages;
+use Pteranodon\Traits\Helpers\AvailableLanguages;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use Pterodactyl\Notifications\SendPasswordReset as ResetPasswordNotification;
+use Pteranodon\Notifications\SendPasswordReset as ResetPasswordNotification;
 
 /**
- * Pterodactyl\Models\User.
+ * Pteranodon\Models\User.
  *
  * @property int $id
  * @property string|null $external_id
@@ -44,18 +44,18 @@ use Pterodactyl\Notifications\SendPasswordReset as ResetPasswordNotification;
  * @property string $avatar_url
  * @property string|null $admin_role_name
  * @property string $md5
- * @property \Pterodactyl\Models\AdminRole|null $adminRole
- * @property \Illuminate\Database\Eloquent\Collection|\Pterodactyl\Models\ApiKey[] $apiKeys
+ * @property \Pteranodon\Models\AdminRole|null $adminRole
+ * @property \Illuminate\Database\Eloquent\Collection|\Pteranodon\Models\ApiKey[] $apiKeys
  * @property int|null $api_keys_count
  * @property \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property int|null $notifications_count
- * @property \Illuminate\Database\Eloquent\Collection|\Pterodactyl\Models\RecoveryToken[] $recoveryTokens
+ * @property \Illuminate\Database\Eloquent\Collection|\Pteranodon\Models\RecoveryToken[] $recoveryTokens
  * @property int|null $recovery_tokens_count
- * @property \Illuminate\Database\Eloquent\Collection|\Pterodactyl\Models\Server[] $servers
+ * @property \Illuminate\Database\Eloquent\Collection|\Pteranodon\Models\Server[] $servers
  * @property int|null $servers_count
- * @property \Illuminate\Database\Eloquent\Collection|\Pterodactyl\Models\UserSSHKey[] $sshKeys
+ * @property \Illuminate\Database\Eloquent\Collection|\Pteranodon\Models\UserSSHKey[] $sshKeys
  * @property int|null $ssh_keys_count
- * @property \Illuminate\Database\Eloquent\Collection|\Pterodactyl\Models\ApiKey[] $tokens
+ * @property \Illuminate\Database\Eloquent\Collection|\Pteranodon\Models\ApiKey[] $tokens
  * @property int|null $tokens_count
  *
  * @method static \Database\Factories\UserFactory factory(...$parameters)

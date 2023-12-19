@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application;
+namespace Pteranodon\Http\Requests\Api\Application;
 
-use Pterodactyl\Http\Requests\Api\ApiRequest;
+use Pteranodon\Http\Requests\Api\ApiRequest;
 
 abstract class ApplicationApiRequest extends ApiRequest
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Contracts\Repository;
+namespace Pteranodon\Contracts\Repository;
 
-use Pterodactyl\Models\Task;
+use Pteranodon\Models\Task;
 
 interface TaskRepositoryInterface extends RepositoryInterface
 {
     /**
      * Get a task and the server relationship for that task.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Pteranodon\Exceptions\Repository\RecordNotFoundException
      */
     public function getTaskForJobProcess(int $id): Task;
 

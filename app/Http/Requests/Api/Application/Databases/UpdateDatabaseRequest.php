@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Databases;
+namespace Pteranodon\Http\Requests\Api\Application\Databases;
 
-use Pterodactyl\Models\DatabaseHost;
+use Pteranodon\Models\DatabaseHost;
 
 class UpdateDatabaseRequest extends StoreDatabaseRequest
 {

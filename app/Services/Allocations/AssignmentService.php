@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Services\Allocations;
+namespace Pteranodon\Services\Allocations;
 
 use IPTools\Network;
-use Pterodactyl\Models\Node;
+use Pteranodon\Models\Node;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Exceptions\Service\Allocation\CidrOutOfRangeException;
-use Pterodactyl\Exceptions\Service\Allocation\PortOutOfRangeException;
-use Pterodactyl\Exceptions\Service\Allocation\InvalidPortMappingException;
-use Pterodactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException;
+use Pteranodon\Exceptions\DisplayException;
+use Pteranodon\Contracts\Repository\AllocationRepositoryInterface;
+use Pteranodon\Exceptions\Service\Allocation\CidrOutOfRangeException;
+use Pteranodon\Exceptions\Service\Allocation\PortOutOfRangeException;
+use Pteranodon\Exceptions\Service\Allocation\InvalidPortMappingException;
+use Pteranodon\Exceptions\Service\Allocation\TooManyPortsInRangeException;
 
 class AssignmentService
 {
@@ -31,11 +31,11 @@ class AssignmentService
     /**
      * Insert allocations into the database and link them to a specific node.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\CidrOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\InvalidPortMappingException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\PortOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException
+     * @throws \Pteranodon\Exceptions\DisplayException
+     * @throws \Pteranodon\Exceptions\Service\Allocation\CidrOutOfRangeException
+     * @throws \Pteranodon\Exceptions\Service\Allocation\InvalidPortMappingException
+     * @throws \Pteranodon\Exceptions\Service\Allocation\PortOutOfRangeException
+     * @throws \Pteranodon\Exceptions\Service\Allocation\TooManyPortsInRangeException
      */
     public function handle(Node $node, array $data): void
     {

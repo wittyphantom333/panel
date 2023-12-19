@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin;
+namespace Pteranodon\Http\Controllers\Admin;
 
 use Illuminate\View\View;
-use Pterodactyl\Http\Controllers\Controller;
+use Pteranodon\Http\Controllers\Controller;
 
 class BaseController extends Controller
 {

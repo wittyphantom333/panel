@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Account;
+namespace Pteranodon\Http\Requests\Api\Client\Account;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Hashing\Hasher;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
-use Pterodactyl\Exceptions\Http\Base\InvalidPasswordProvidedException;
+use Pteranodon\Http\Requests\Api\Client\ClientApiRequest;
+use Pteranodon\Exceptions\Http\Base\InvalidPasswordProvidedException;
 
 class UpdatePasswordRequest extends ClientApiRequest
 {
     /**
-     * @throws \Pterodactyl\Exceptions\Http\Base\InvalidPasswordProvidedException
+     * @throws \Pteranodon\Exceptions\Http\Base\InvalidPasswordProvidedException
      */
     public function authorize(): bool
     {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Mounts;
+namespace Pteranodon\Http\Requests\Api\Application\Mounts;
 
-use Pterodactyl\Models\Mount;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Pteranodon\Models\Mount;
+use Pteranodon\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class StoreMountRequest extends ApplicationApiRequest
 {

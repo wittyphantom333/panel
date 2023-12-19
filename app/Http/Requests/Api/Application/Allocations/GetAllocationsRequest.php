@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Allocations;
+namespace Pteranodon\Http\Requests\Api\Application\Allocations;
 
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Pteranodon\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class GetAllocationsRequest extends ApplicationApiRequest
 {

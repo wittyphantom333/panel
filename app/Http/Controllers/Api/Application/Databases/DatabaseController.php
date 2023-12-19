@@ -1,21 +1,21 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Databases;
+namespace Pteranodon\Http\Controllers\Api\Application\Databases;
 
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Models\DatabaseHost;
+use Pteranodon\Models\DatabaseHost;
 use Spatie\QueryBuilder\QueryBuilder;
-use Pterodactyl\Services\Databases\Hosts\HostUpdateService;
-use Pterodactyl\Services\Databases\Hosts\HostCreationService;
-use Pterodactyl\Exceptions\Http\QueryValueOutOfRangeHttpException;
-use Pterodactyl\Transformers\Api\Application\DatabaseHostTransformer;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Databases\GetDatabaseRequest;
-use Pterodactyl\Http\Requests\Api\Application\Databases\GetDatabasesRequest;
-use Pterodactyl\Http\Requests\Api\Application\Databases\StoreDatabaseRequest;
-use Pterodactyl\Http\Requests\Api\Application\Databases\DeleteDatabaseRequest;
-use Pterodactyl\Http\Requests\Api\Application\Databases\UpdateDatabaseRequest;
+use Pteranodon\Services\Databases\Hosts\HostUpdateService;
+use Pteranodon\Services\Databases\Hosts\HostCreationService;
+use Pteranodon\Exceptions\Http\QueryValueOutOfRangeHttpException;
+use Pteranodon\Transformers\Api\Application\DatabaseHostTransformer;
+use Pteranodon\Http\Controllers\Api\Application\ApplicationApiController;
+use Pteranodon\Http\Requests\Api\Application\Databases\GetDatabaseRequest;
+use Pteranodon\Http\Requests\Api\Application\Databases\GetDatabasesRequest;
+use Pteranodon\Http\Requests\Api\Application\Databases\StoreDatabaseRequest;
+use Pteranodon\Http\Requests\Api\Application\Databases\DeleteDatabaseRequest;
+use Pteranodon\Http\Requests\Api\Application\Databases\UpdateDatabaseRequest;
 
 class DatabaseController extends ApplicationApiController
 {

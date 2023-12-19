@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Databases;
+namespace Pteranodon\Http\Requests\Api\Client\Servers\Databases;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Contracts\Http\ClientPermissionsRequest;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Pteranodon\Models\Permission;
+use Pteranodon\Contracts\Http\ClientPermissionsRequest;
+use Pteranodon\Http\Requests\Api\Client\ClientApiRequest;
 
 class GetDatabasesRequest extends ClientApiRequest implements ClientPermissionsRequest
 {

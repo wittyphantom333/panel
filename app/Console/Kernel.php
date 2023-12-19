@@ -1,17 +1,17 @@
 <?php
 
-namespace Pterodactyl\Console;
+namespace Pteranodon\Console;
 
 use Ramsey\Uuid\Uuid;
-use Pterodactyl\Models\ActivityLog;
+use Pteranodon\Models\ActivityLog;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Database\Console\PruneCommand;
-use Pterodactyl\Repositories\Eloquent\SettingsRepository;
+use Pteranodon\Repositories\Eloquent\SettingsRepository;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use Pterodactyl\Services\Telemetry\TelemetryCollectionService;
-use Pterodactyl\Console\Commands\Schedule\ProcessRunnableCommand;
-use Pterodactyl\Console\Commands\Maintenance\PruneOrphanedBackupsCommand;
-use Pterodactyl\Console\Commands\Maintenance\CleanServiceBackupFilesCommand;
+use Pteranodon\Services\Telemetry\TelemetryCollectionService;
+use Pteranodon\Console\Commands\Schedule\ProcessRunnableCommand;
+use Pteranodon\Console\Commands\Maintenance\PruneOrphanedBackupsCommand;
+use Pteranodon\Console\Commands\Maintenance\CleanServiceBackupFilesCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -44,7 +44,7 @@ class Kernel extends ConsoleKernel
             $schedule->command(PruneCommand::class, ['--model' => [ActivityLog::class]])->daily();
         }
 
-        if (config('pterodactyl.telemetry.enabled')) {
+        if (config('pteranodon.telemetry.enabled')) {
             $this->registerTelemetry($schedule);
         }
     }
@@ -52,7 +52,7 @@ class Kernel extends ConsoleKernel
     /**
      * I wonder what this does.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
      * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     private function registerTelemetry(Schedule $schedule): void

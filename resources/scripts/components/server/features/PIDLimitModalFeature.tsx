@@ -64,7 +64,7 @@ const PIDLimitModalFeature = () => {
                     </div>
                     <p css={tw`mt-4`}>This server has reached the maximum process or memory limit.</p>
                     <p css={tw`mt-4`}>
-                        Increasing <code css={tw`font-mono bg-neutral-900`}>container_pid_limit</code> in the wings
+                        Increasing <code css={tw`font-mono bg-neutral-900`}>container_pid_limit</code> in the buddy
                         configuration, <code css={tw`font-mono bg-neutral-900`}>config.yml</code>, might help resolve
                         this issue.
                     </p>

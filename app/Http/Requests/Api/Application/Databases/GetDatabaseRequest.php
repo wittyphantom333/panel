@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Databases;
+namespace Pteranodon\Http\Requests\Api\Application\Databases;
 
 class GetDatabaseRequest extends GetDatabasesRequest
 {

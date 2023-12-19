@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client;
+namespace Pteranodon\Tests\Integration\Api\Client;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Models\Permission;
+use Pteranodon\Models\User;
+use Pteranodon\Models\Server;
+use Pteranodon\Models\Subuser;
+use Pteranodon\Models\Allocation;
+use Pteranodon\Models\Permission;
 
 class ClientControllerTest extends ClientApiIntegrationTestCase
 {

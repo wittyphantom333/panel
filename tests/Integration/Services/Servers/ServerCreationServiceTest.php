@@ -1,24 +1,24 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Services\Servers;
+namespace Pteranodon\Tests\Integration\Services\Servers;
 
 use Mockery\MockInterface;
-use Pterodactyl\Models\Egg;
+use Pteranodon\Models\Egg;
 use GuzzleHttp\Psr7\Request;
-use Pterodactyl\Models\Node;
-use Pterodactyl\Models\User;
+use Pteranodon\Models\Node;
+use Pteranodon\Models\User;
 use GuzzleHttp\Psr7\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Location;
-use Pterodactyl\Models\Allocation;
+use Pteranodon\Models\Server;
+use Pteranodon\Models\Location;
+use Pteranodon\Models\Allocation;
 use Illuminate\Foundation\Testing\WithFaker;
 use GuzzleHttp\Exception\BadResponseException;
 use Illuminate\Validation\ValidationException;
-use Pterodactyl\Models\Objects\DeploymentObject;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
-use Pterodactyl\Services\Servers\ServerCreationService;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Pteranodon\Models\Objects\DeploymentObject;
+use Pteranodon\Tests\Integration\IntegrationTestCase;
+use Pteranodon\Services\Servers\ServerCreationService;
+use Pteranodon\Repositories\Wings\DaemonServerRepository;
+use Pteranodon\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ServerCreationServiceTest extends IntegrationTestCase
 {
@@ -37,7 +37,7 @@ class ServerCreationServiceTest extends IntegrationTestCase
 
         /* @noinspection PhpFieldAssignmentTypeMismatchInspection */
         $this->bungeecord = Egg::query()
-            ->where('author', 'support@pterodactyl.io')
+            ->where('author', 'support@pteranodon.io')
             ->where('name', 'Bungeecord')
             ->firstOrFail();
 
@@ -54,18 +54,18 @@ class ServerCreationServiceTest extends IntegrationTestCase
      */
     public function testServerIsCreatedWithDeploymentObject()
     {
-        /** @var \Pterodactyl\Models\User $user */
+        /** @var \Pteranodon\Models\User $user */
         $user = User::factory()->create();
 
-        /** @var \Pterodactyl\Models\Location $location */
+        /** @var \Pteranodon\Models\Location $location */
         $location = Location::factory()->create();
 
-        /** @var \Pterodactyl\Models\Node $node */
+        /** @var \Pteranodon\Models\Node $node */
         $node = Node::factory()->create([
             'location_id' => $location->id,
         ]);
 
-        /** @var \Pterodactyl\Models\Allocation[]|\Illuminate\Database\Eloquent\Collection $allocations */
+        /** @var \Pteranodon\Models\Allocation[]|\Illuminate\Database\Eloquent\Collection $allocations */
         $allocations = Allocation::factory()->times(5)->create([
             'node_id' => $node->id,
         ]);
@@ -157,18 +157,18 @@ class ServerCreationServiceTest extends IntegrationTestCase
      */
     public function testErrorEncounteredByWingsCausesServerToBeDeleted()
     {
-        /** @var \Pterodactyl\Models\User $user */
+        /** @var \Pteranodon\Models\User $user */
         $user = User::factory()->create();
 
-        /** @var \Pterodactyl\Models\Location $location */
+        /** @var \Pteranodon\Models\Location $location */
         $location = Location::factory()->create();
 
-        /** @var \Pterodactyl\Models\Node $node */
+        /** @var \Pteranodon\Models\Node $node */
         $node = Node::factory()->create([
             'location_id' => $location->id,
         ]);
 
-        /** @var \Pterodactyl\Models\Allocation $allocation */
+        /** @var \Pteranodon\Models\Allocation $allocation */
         $allocation = Allocation::factory()->create([
             'node_id' => $node->id,
         ]);

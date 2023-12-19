@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration;
+namespace Pteranodon\Tests\Integration;
 
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
-use Pterodactyl\Tests\TestCase;
+use Pteranodon\Tests\TestCase;
 use Illuminate\Support\Facades\Event;
-use Pterodactyl\Events\ActivityLogged;
-use Pterodactyl\Tests\Assertions\AssertsActivityLogged;
-use Pterodactyl\Tests\Traits\Integration\CreatesTestModels;
+use Pteranodon\Events\ActivityLogged;
+use Pteranodon\Tests\Assertions\AssertsActivityLogged;
+use Pteranodon\Tests\Traits\Integration\CreatesTestModels;
 
 abstract class IntegrationTestCase extends TestCase
 {

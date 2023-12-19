@@ -1,24 +1,24 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Nests;
+namespace Pteranodon\Http\Controllers\Api\Application\Nests;
 
-use Pterodactyl\Models\Nest;
+use Pteranodon\Models\Nest;
 use Illuminate\Http\Response;
 use Spatie\QueryBuilder\QueryBuilder;
-use Pterodactyl\Services\Nests\NestUpdateService;
-use Pterodactyl\Services\Nests\NestCreationService;
-use Pterodactyl\Services\Nests\NestDeletionService;
-use Pterodactyl\Services\Eggs\Sharing\EggImporterService;
-use Pterodactyl\Transformers\Api\Application\EggTransformer;
-use Pterodactyl\Transformers\Api\Application\NestTransformer;
-use Pterodactyl\Exceptions\Http\QueryValueOutOfRangeHttpException;
-use Pterodactyl\Http\Requests\Api\Application\Nests\GetNestRequest;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\ImportEggRequest;
-use Pterodactyl\Http\Requests\Api\Application\Nests\GetNestsRequest;
-use Pterodactyl\Http\Requests\Api\Application\Nests\StoreNestRequest;
-use Pterodactyl\Http\Requests\Api\Application\Nests\DeleteNestRequest;
-use Pterodactyl\Http\Requests\Api\Application\Nests\UpdateNestRequest;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Pteranodon\Services\Nests\NestUpdateService;
+use Pteranodon\Services\Nests\NestCreationService;
+use Pteranodon\Services\Nests\NestDeletionService;
+use Pteranodon\Services\Eggs\Sharing\EggImporterService;
+use Pteranodon\Transformers\Api\Application\EggTransformer;
+use Pteranodon\Transformers\Api\Application\NestTransformer;
+use Pteranodon\Exceptions\Http\QueryValueOutOfRangeHttpException;
+use Pteranodon\Http\Requests\Api\Application\Nests\GetNestRequest;
+use Pteranodon\Http\Requests\Api\Application\Eggs\ImportEggRequest;
+use Pteranodon\Http\Requests\Api\Application\Nests\GetNestsRequest;
+use Pteranodon\Http\Requests\Api\Application\Nests\StoreNestRequest;
+use Pteranodon\Http\Requests\Api\Application\Nests\DeleteNestRequest;
+use Pteranodon\Http\Requests\Api\Application\Nests\UpdateNestRequest;
+use Pteranodon\Http\Controllers\Api\Application\ApplicationApiController;
 
 class NestController extends ApplicationApiController
 {
@@ -69,7 +69,7 @@ class NestController extends ApplicationApiController
     /**
      * Creates a new nest.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
      */
     public function store(StoreNestRequest $request): array
     {
@@ -99,8 +99,8 @@ class NestController extends ApplicationApiController
     /**
      * Updates an existing nest.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Repository\RecordNotFoundException
      */
     public function update(UpdateNestRequest $request, Nest $nest): array
     {
@@ -114,7 +114,7 @@ class NestController extends ApplicationApiController
     /**
      * Deletes an existing nest.
      *
-     * @throws \Pterodactyl\Exceptions\Service\HasActiveServersException
+     * @throws \Pteranodon\Exceptions\Service\HasActiveServersException
      */
     public function delete(DeleteNestRequest $request, Nest $nest): Response
     {

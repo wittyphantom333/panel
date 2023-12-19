@@ -7,7 +7,7 @@ return [
     |--------------------------------------------------------------------------
     | Application Version
     |--------------------------------------------------------------------------
-    | This value is set when creating a Pterodactyl release. You should not
+    | This value is set when creating a Pteranodon release. You should not
     | change this value if you are not maintaining your own internal versions.
     */
 
@@ -23,7 +23,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Pterodactyl'),
+    'name' => env('APP_NAME', 'Pteranodon'),
 
     /*
     |--------------------------------------------------------------------------
@@ -192,16 +192,16 @@ return [
         /*
          * Application Service Providers...
          */
-        Pterodactyl\Providers\ActivityLogServiceProvider::class,
-        Pterodactyl\Providers\AppServiceProvider::class,
-        Pterodactyl\Providers\AuthServiceProvider::class,
-        Pterodactyl\Providers\BackupsServiceProvider::class,
-        Pterodactyl\Providers\BladeServiceProvider::class,
-        Pterodactyl\Providers\EventServiceProvider::class,
-        Pterodactyl\Providers\HashidsServiceProvider::class,
-        Pterodactyl\Providers\RouteServiceProvider::class,
-        Pterodactyl\Providers\RepositoryServiceProvider::class,
-        Pterodactyl\Providers\ViewComposerServiceProvider::class,
+        Pteranodon\Providers\ActivityLogServiceProvider::class,
+        Pteranodon\Providers\AppServiceProvider::class,
+        Pteranodon\Providers\AuthServiceProvider::class,
+        Pteranodon\Providers\BackupsServiceProvider::class,
+        Pteranodon\Providers\BladeServiceProvider::class,
+        Pteranodon\Providers\EventServiceProvider::class,
+        Pteranodon\Providers\HashidsServiceProvider::class,
+        Pteranodon\Providers\RouteServiceProvider::class,
+        Pteranodon\Providers\RepositoryServiceProvider::class,
+        Pteranodon\Providers\ViewComposerServiceProvider::class,
     ],
 
     /*
@@ -220,8 +220,8 @@ return [
         'JavaScript' => Laracasts\Utilities\JavaScript\JavaScriptFacade::class,
 
         // Custom Facades
-        'Activity' => Pterodactyl\Facades\Activity::class,
-        'LogBatch' => Pterodactyl\Facades\LogBatch::class,
-        'LogTarget' => Pterodactyl\Facades\LogTarget::class,
+        'Activity' => Pteranodon\Facades\Activity::class,
+        'LogBatch' => Pteranodon\Facades\LogBatch::class,
+        'LogTarget' => Pteranodon\Facades\LogTarget::class,
     ])->toArray(),
 ];

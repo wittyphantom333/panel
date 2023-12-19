@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Databases;
+namespace Pteranodon\Http\Requests\Api\Application\Databases;
 
-use Pterodactyl\Models\DatabaseHost;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Pteranodon\Models\DatabaseHost;
+use Pteranodon\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class StoreDatabaseRequest extends ApplicationApiRequest
 {

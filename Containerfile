@@ -4,7 +4,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH registry.access.redhat.com/ubi9/nod
 USER        0
 RUN         npm install -g pnpm
 
-WORKDIR     /var/www/pterodactyl
+WORKDIR     /var/www/pteranodon
 
 COPY        --chown=1001:0 public ./public
 COPY        --chown=1001:0 resources/scripts ./resources/scripts
@@ -47,18 +47,18 @@ RUN         microdnf update -y \
                 && microdnf remove -y tar wget \
                 && microdnf clean all
 
-COPY        --chown=caddy:caddy --from=builder /var/www/pterodactyl /var/www/pterodactyl
+COPY        --chown=caddy:caddy --from=builder /var/www/pteranodon /var/www/pteranodon
 
-WORKDIR     /var/www/pterodactyl
+WORKDIR     /var/www/pteranodon
 
-RUN         mkdir -p /tmp/pterodactyl/cache /tmp/pterodactyl/framework/{cache,sessions,views} storage/framework \
+RUN         mkdir -p /tmp/pteranodon/cache /tmp/pteranodon/framework/{cache,sessions,views} storage/framework \
                 && rm -rf bootstrap/cache storage/framework/sessions storage/framework/views storage/framework/cache \
-                && ln -s /tmp/pterodactyl/cache /var/www/pterodactyl/bootstrap/cache \
-                && ln -s /tmp/pterodactyl/framework/cache /var/www/pterodactyl/storage/framework/cache \
-                && ln -s /tmp/pterodactyl/framework/sessions /var/www/pterodactyl/storage/framework/sessions \
-                && ln -s /tmp/pterodactyl/framework/views /var/www/pterodactyl/storage/framework/views \
-                && chmod -R 755 /var/www/pterodactyl/storage/* /tmp/pterodactyl/cache \
-                && chown -R caddy:caddy /var/www/pterodactyl /tmp/pterodactyl/{cache,framework}
+                && ln -s /tmp/pteranodon/cache /var/www/pteranodon/bootstrap/cache \
+                && ln -s /tmp/pteranodon/framework/cache /var/www/pteranodon/storage/framework/cache \
+                && ln -s /tmp/pteranodon/framework/sessions /var/www/pteranodon/storage/framework/sessions \
+                && ln -s /tmp/pteranodon/framework/views /var/www/pteranodon/storage/framework/views \
+                && chmod -R 755 /var/www/pteranodon/storage/* /tmp/pteranodon/cache \
+                && chown -R caddy:caddy /var/www/pteranodon /tmp/pteranodon/{cache,framework}
 
 USER        caddy
 ENV         USER=caddy

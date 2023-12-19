@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service;
+namespace Pteranodon\Exceptions\Service;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Pteranodon\Exceptions\DisplayException;
 
 class InvalidFileUploadException extends DisplayException
 {

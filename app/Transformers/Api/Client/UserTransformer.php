@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Pteranodon\Transformers\Api\Client;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Models\User;
+use Pteranodon\Transformers\Api\Transformer;
 
 class UserTransformer extends Transformer
 {

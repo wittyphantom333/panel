@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Base;
+namespace Pteranodon\Http\Controllers\Base;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Translation\Translator;
 use Illuminate\Contracts\Translation\Loader;
-use Pterodactyl\Http\Controllers\Controller;
+use Pteranodon\Http\Controllers\Controller;
 
 class LocaleController extends Controller
 {

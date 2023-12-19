@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Application;
+namespace Pteranodon\Tests\Integration\Api\Application;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\ApiKey;
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
+use Pteranodon\Models\User;
+use Pteranodon\Models\ApiKey;
+use Pteranodon\Services\Acl\Api\AdminAcl;
+use Pteranodon\Tests\Integration\IntegrationTestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Pterodactyl\Tests\Traits\Integration\CreatesTestModels;
-use Pterodactyl\Tests\Traits\Http\IntegrationJsonRequestAssertions;
+use Pteranodon\Tests\Traits\Integration\CreatesTestModels;
+use Pteranodon\Tests\Traits\Http\IntegrationJsonRequestAssertions;
 
 abstract class ApplicationApiIntegrationTestCase extends IntegrationTestCase
 {
@@ -32,7 +32,7 @@ abstract class ApplicationApiIntegrationTestCase extends IntegrationTestCase
         $this->key = $this->createApiKey($this->user);
 
         $this
-            ->withHeader('Accept', 'application/vnd.pterodactyl.v1+json')
+            ->withHeader('Accept', 'application/vnd.pteranodon.v1+json')
             ->withHeader('Authorization', 'Bearer ' . $this->key->identifier . decrypt($this->key->token));
     }
 

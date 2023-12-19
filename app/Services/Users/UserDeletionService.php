@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Users;
+namespace Pteranodon\Services\Users;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Exceptions\DisplayException;
+use Pteranodon\Models\User;
+use Pteranodon\Exceptions\DisplayException;
 use Illuminate\Contracts\Translation\Translator;
-use Pterodactyl\Contracts\Repository\UserRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
+use Pteranodon\Contracts\Repository\UserRepositoryInterface;
+use Pteranodon\Contracts\Repository\ServerRepositoryInterface;
 
 class UserDeletionService
 {
@@ -23,7 +23,7 @@ class UserDeletionService
     /**
      * Delete a user from the panel only if they have no servers attached to their account.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Pteranodon\Exceptions\DisplayException
      */
     public function handle(int|User $user): void
     {

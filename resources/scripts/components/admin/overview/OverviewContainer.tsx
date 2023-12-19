@@ -79,7 +79,7 @@ export default () => {
                             {versionData?.panel.current === 'canary' ? (
                                 <p css={tw`text-neutral-200`}>
                                     I hope you enjoy living on the edge because you are running a{' '}
-                                    <Code>{versionData?.panel.current}</Code> version of Pterodactyl.
+                                    <Code>{versionData?.panel.current}</Code> version of Pteranodon.
                                 </p>
                             ) : versionData?.panel.latest === versionData?.panel.current ? (
                                 <p css={tw`text-neutral-200`}>

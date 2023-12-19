@@ -1,11 +1,11 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Http\Connection;
+namespace Pteranodon\Exceptions\Http\Connection;
 
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Log;
 use GuzzleHttp\Exception\GuzzleException;
-use Pterodactyl\Exceptions\DisplayException;
+use Pteranodon\Exceptions\DisplayException;
 
 /**
  * @method \GuzzleHttp\Exception\GuzzleException getPrevious()
@@ -33,7 +33,7 @@ class DaemonConnectionException extends DisplayException
 
         if ($useStatusCode) {
             $this->statusCode = is_null($response) ? $this->statusCode : $response->getStatusCode();
-            // There are rare conditions where wings encounters a panic condition and crashes the
+            // There are rare conditions where buddy encounters a panic condition and crashes the
             // request being made after content has already been sent over the wire. In these cases
             // you can end up with a "successful" response code that is actual an error.
             //

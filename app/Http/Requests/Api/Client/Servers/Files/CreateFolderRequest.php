@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Files;
+namespace Pteranodon\Http\Requests\Api\Client\Servers\Files;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Pteranodon\Models\Permission;
+use Pteranodon\Http\Requests\Api\Client\ClientApiRequest;
 
 class CreateFolderRequest extends ClientApiRequest
 {

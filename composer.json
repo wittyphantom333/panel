@@ -1,11 +1,11 @@
 {
-    "name": "pterodactyl/panel",
+    "name": "pteranodon/panel",
     "description": "The free, open-source game management panel. Supporting Minecraft, Spigot, BungeeCord, and SRCDS servers.",
     "license": "MIT",
     "authors": [
         {
             "name": "Matthew Penner",
-            "email": "matthew@pterodactyl.io",
+            "email": "matthew@pteranodon.io",
             "homepage": "https://github.com/matthewpi",
             "role": "Lead Developer"
         },
@@ -58,7 +58,7 @@
         "fakerphp/faker": "~1.21.0",
         "friendsofphp/php-cs-fixer": "~3.14.4",
         "itsgoingd/clockwork": "~5.1.12",
-        "laravel/sail": "~1.21.0",
+        "laravel/sail": "^1.26",
         "mockery/mockery": "~1.5.1",
         "nunomaduro/collision": "~7.0.5",
         "nunomaduro/larastan": "~2.4.1",
@@ -71,14 +71,14 @@
             "app/helpers.php"
         ],
         "psr-4": {
-            "Pterodactyl\\": "app/",
+            "Pteranodon\\": "app/",
             "Database\\Factories\\": "database/Factories/",
             "Database\\Seeders\\": "database/Seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Pterodactyl\\Tests\\": "tests/"
+            "Pteranodon\\Tests\\": "tests/"
         }
     },
     "scripts": {

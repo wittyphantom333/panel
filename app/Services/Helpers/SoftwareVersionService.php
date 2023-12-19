@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Services\Helpers;
+namespace Pteranodon\Services\Helpers;
 
 use Exception;
 use Carbon\CarbonImmutable;
@@ -8,12 +8,12 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
-use Pterodactyl\Exceptions\Service\Helper\CdnVersionFetchingException;
+use Pteranodon\Exceptions\Service\Helper\CdnVersionFetchingException;
 
 class SoftwareVersionService
 {
-    public const VERSION_CACHE_KEY = 'pterodactyl:versioning_data';
-    public const GIT_VERSION_CACHE_KEY = 'pterodactyl:git_data';
+    public const VERSION_CACHE_KEY = 'pteranodon:versioning_data';
+    public const GIT_VERSION_CACHE_KEY = 'pteranodon:git_data';
 
     private static array $result;
 
@@ -46,7 +46,7 @@ class SoftwareVersionService
      */
     public function getLatestWings(): string
     {
-        return Arr::get(self::$result, 'wings') ?? 'error';
+        return Arr::get(self::$result, 'buddy') ?? 'error';
     }
 
     /**
@@ -54,7 +54,7 @@ class SoftwareVersionService
      */
     public function getDiscord(): string
     {
-        return Arr::get(self::$result, 'discord') ?? 'https://pterodactyl.io/discord';
+        return Arr::get(self::$result, 'discord') ?? 'https://pteranodon.io/discord';
     }
 
     /**
@@ -108,7 +108,7 @@ class SoftwareVersionService
                 'latest' => $this->getLatestPanel(),
             ],
 
-            'wings' => [
+            'buddy' => [
                 'latest' => $this->getLatestWings(),
             ],
 
@@ -151,9 +151,9 @@ class SoftwareVersionService
      */
     protected function cacheVersionData(): array
     {
-        return $this->cache->remember(self::VERSION_CACHE_KEY, CarbonImmutable::now()->addMinutes(config('pterodactyl.cdn.cache_time', 60)), function () {
+        return $this->cache->remember(self::VERSION_CACHE_KEY, CarbonImmutable::now()->addMinutes(config('pteranodon.cdn.cache_time', 60)), function () {
             try {
-                $response = Http::get(config('pterodactyl.cdn.url'));
+                $response = Http::get(config('pteranodon.cdn.url'));
 
                 if ($response->status() === 200) {
                     return json_decode($response->body(), true);

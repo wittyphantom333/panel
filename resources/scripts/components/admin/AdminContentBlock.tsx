@@ -27,11 +27,11 @@ const AdminContentBlock: React.FC<{
                 &copy; 2015 - 2021&nbsp;
                 <a
                     rel={'noopener nofollow noreferrer'}
-                    href={'https://pterodactyl.io'}
+                    href={'https://pteranodon.io'}
                     target={'_blank'}
                     css={tw`no-underline text-neutral-500 hover:text-neutral-300`}
                 >
-                    Pterodactyl Software
+                    Pteranodon Software
                 </a>
             </p> */}
         </>

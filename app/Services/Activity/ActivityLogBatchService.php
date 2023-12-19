@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Services\Activity;
+namespace Pteranodon\Services\Activity;
 
 use Ramsey\Uuid\Uuid;
 

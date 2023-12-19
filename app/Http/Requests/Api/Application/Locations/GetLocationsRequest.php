@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Locations;
+namespace Pteranodon\Http\Requests\Api\Application\Locations;
 
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Pteranodon\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class GetLocationsRequest extends ApplicationApiRequest
 {

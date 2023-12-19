@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Pteranodon\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property \Carbon\CarbonImmutable $created_at
  * @property \Carbon\CarbonImmutable $updated_at
  * @property \Carbon\CarbonImmutable|null $deleted_at
- * @property \Pterodactyl\Models\Server $server
+ * @property \Pteranodon\Models\Server $server
  */
 class Backup extends Model
 {
@@ -29,7 +29,7 @@ class Backup extends Model
 
     public const RESOURCE_NAME = 'backup';
 
-    public const ADAPTER_WINGS = 'wings';
+    public const ADAPTER_WINGS = 'buddy';
     public const ADAPTER_AWS_S3 = 's3';
 
     protected $table = 'backups';

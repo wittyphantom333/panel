@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Application;
+namespace Pteranodon\Transformers\Api\Application;
 
-use Pterodactyl\Models\EggVariable;
-use Pterodactyl\Models\ServerVariable;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Models\EggVariable;
+use Pteranodon\Models\ServerVariable;
+use Pteranodon\Transformers\Api\Transformer;
 
 class ServerVariableTransformer extends Transformer
 {

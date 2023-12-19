@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Services\Eggs\Variables;
+namespace Pteranodon\Services\Eggs\Variables;
 
 use Illuminate\Support\Str;
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\EggVariable;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Traits\Services\ValidatesValidationRules;
+use Pteranodon\Models\Egg;
+use Pteranodon\Models\EggVariable;
+use Pteranodon\Exceptions\DisplayException;
+use Pteranodon\Traits\Services\ValidatesValidationRules;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
-use Pterodactyl\Exceptions\Service\Egg\Variable\ReservedVariableNameException;
+use Pteranodon\Exceptions\Service\Egg\Variable\ReservedVariableNameException;
 
 class VariableUpdateService
 {
@@ -33,8 +33,8 @@ class VariableUpdateService
     /**
      * Update a specific egg variable.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Service\Egg\Variable\ReservedVariableNameException
+     * @throws \Pteranodon\Exceptions\DisplayException
+     * @throws \Pteranodon\Exceptions\Service\Egg\Variable\ReservedVariableNameException
      */
     public function handle(Egg $egg, array $data): void
     {

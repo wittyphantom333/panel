@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application;
+namespace Pteranodon\Http\Controllers\Api\Application;
 
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Services\Helpers\SoftwareVersionService;
+use Pteranodon\Services\Helpers\SoftwareVersionService;
 
 class VersionController extends ApplicationApiController
 {

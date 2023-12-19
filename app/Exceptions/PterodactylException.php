@@ -1,7 +1,7 @@
 <?php
 
-namespace Pterodactyl\Exceptions;
+namespace Pteranodon\Exceptions;
 
-class PterodactylException extends \Exception
+class PteranodonException extends \Exception
 {
 }

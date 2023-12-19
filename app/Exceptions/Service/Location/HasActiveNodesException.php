@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Location;
+namespace Pteranodon\Exceptions\Service\Location;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Exceptions\DisplayException;
+use Pteranodon\Exceptions\DisplayException;
 
 class HasActiveNodesException extends DisplayException
 {
