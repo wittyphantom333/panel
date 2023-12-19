@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Pteranodon\Services\Servers;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
+use Pteranodon\Models\Server;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Pteranodon\Repositories\Wings\DaemonServerRepository;
+use Pteranodon\Services\Databases\DatabaseManagementService;
+use Pteranodon\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ServerDeletionService
 {
@@ -38,7 +38,7 @@ class ServerDeletionService
      * Delete a server from the panel and remove any associated databases from hosts.
      *
      * @throws \Throwable
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Pteranodon\Exceptions\DisplayException
      */
     public function handle(Server $server): void
     {
@@ -70,7 +70,7 @@ class ServerDeletionService
                     // the host instance, but we couldn't delete it anyways so not sure how we would
                     // handle this better anyways.
                     //
-                    // @see https://github.com/pterodactyl/panel/issues/2085
+                    // @see https://github.com/wittyphantom333/panel/issues/2085
                     $database->delete();
 
                     Log::warning($exception);

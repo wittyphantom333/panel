@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Http\ViewComposers;
+namespace Pteranodon\Http\ViewComposers;
 
 use Illuminate\View\View;
 
@@ -12,7 +12,7 @@ class AssetComposer
     public function compose(View $view): void
     {
         $view->with('siteConfiguration', [
-            'name' => config('app.name') ?? 'Pterodactyl',
+            'name' => config('app.name') ?? 'Pteranodon',
             'locale' => config('app.locale') ?? 'en',
             'recaptcha' => [
                 'enabled' => config('recaptcha.enabled', false),

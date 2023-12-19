@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Pteranodon\Transformers\Api\Client;
 
-use Pterodactyl\Models\ApiKey;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Models\ApiKey;
+use Pteranodon\Transformers\Api\Transformer;
 
 class ApiKeyTransformer extends Transformer
 {

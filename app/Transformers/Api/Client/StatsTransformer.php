@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Pteranodon\Transformers\Api\Client;
 
 use Illuminate\Support\Arr;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Transformers\Api\Transformer;
 
 class StatsTransformer extends Transformer
 {

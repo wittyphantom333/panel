@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Application\Eggs;
+namespace Pteranodon\Tests\Integration\Api\Application\Eggs;
 
 use Illuminate\Support\Arr;
 use Illuminate\Http\Response;
-use Pterodactyl\Contracts\Repository\EggRepositoryInterface;
-use Pterodactyl\Transformers\Api\Application\EggTransformer;
-use Pterodactyl\Tests\Integration\Api\Application\ApplicationApiIntegrationTestCase;
+use Pteranodon\Contracts\Repository\EggRepositoryInterface;
+use Pteranodon\Transformers\Api\Application\EggTransformer;
+use Pteranodon\Tests\Integration\Api\Application\ApplicationApiIntegrationTestCase;
 
 class EggControllerTest extends ApplicationApiIntegrationTestCase
 {

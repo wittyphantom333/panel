@@ -25,7 +25,7 @@ jobs:
         id: metadata
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/pterodactyl/panel
+          images: ghcr.io/pteranodon/panel
           flavor: |
             latest=false
           tags: |

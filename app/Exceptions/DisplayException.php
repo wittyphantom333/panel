@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Exceptions;
+namespace Pteranodon\Exceptions;
 
 use Exception;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ use Illuminate\Container\Container;
 use Illuminate\Http\RedirectResponse;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
-class DisplayException extends PterodactylException implements HttpExceptionInterface
+class DisplayException extends PteranodonException implements HttpExceptionInterface
 {
     public const LEVEL_DEBUG = 'debug';
     public const LEVEL_INFO = 'info';

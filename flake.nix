@@ -1,5 +1,5 @@
 {
-  description = "Pterodactyl Panel";
+  description = "Pteranodon Panel";
 
   inputs = {
     dream2nix = {
@@ -163,12 +163,12 @@
           })
           .packages
           ."${system}"
-          ."pterodactyl/panel";
+          ."pteranodon/panel";
 
         ui = mkNodePackage {
           inherit src version;
 
-          pname = "pterodactyl";
+          pname = "pteranodon";
           buildInputs = [];
 
           buildPhase = ''
@@ -184,11 +184,11 @@
         panel = pkgs.stdenv.mkDerivation {
           inherit src version;
 
-          pname = "pterodactyl";
+          pname = "pteranodon";
           buildInputs = [app ui];
 
           installPhase = ''
-            cp -r ${app}/lib/vendor/pterodactyl/panel $out
+            cp -r ${app}/lib/vendor/pteranodon/panel $out
 
             chmod 755 $out
             chmod 755 $out/public
@@ -208,7 +208,7 @@
 
           development = with pkgs;
             dockerTools.buildImage {
-              name = "pterodactyl/development";
+              name = "pteranodon/development";
               tag = "panel";
 
               copyToRoot = pkgs.buildEnv {
@@ -233,7 +233,7 @@
 
           oci = with pkgs;
             dockerTools.buildImage {
-              name = "pterodactyl/panel";
+              name = "pteranodon/panel";
               tag = version;
 
               copyToRoot = buildEnv {

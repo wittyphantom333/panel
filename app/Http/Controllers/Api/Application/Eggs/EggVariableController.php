@@ -1,18 +1,18 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Eggs;
+namespace Pteranodon\Http\Controllers\Api\Application\Eggs;
 
-use Pterodactyl\Models\Egg;
+use Pteranodon\Models\Egg;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\EggVariable;
+use Pteranodon\Models\EggVariable;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Services\Eggs\Variables\VariableUpdateService;
-use Pterodactyl\Services\Eggs\Variables\VariableCreationService;
-use Pterodactyl\Transformers\Api\Application\EggVariableTransformer;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\Variables\StoreEggVariableRequest;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\Variables\UpdateEggVariablesRequest;
+use Pteranodon\Services\Eggs\Variables\VariableUpdateService;
+use Pteranodon\Services\Eggs\Variables\VariableCreationService;
+use Pteranodon\Transformers\Api\Application\EggVariableTransformer;
+use Pteranodon\Http\Controllers\Api\Application\ApplicationApiController;
+use Pteranodon\Http\Requests\Api\Application\Eggs\Variables\StoreEggVariableRequest;
+use Pteranodon\Http\Requests\Api\Application\Eggs\Variables\UpdateEggVariablesRequest;
 
 class EggVariableController extends ApplicationApiController
 {
@@ -27,9 +27,9 @@ class EggVariableController extends ApplicationApiController
     /**
      * Creates a new egg variable.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Service\Egg\Variable\BadValidationRuleException
-     * @throws \Pterodactyl\Exceptions\Service\Egg\Variable\ReservedVariableNameException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Service\Egg\Variable\BadValidationRuleException
+     * @throws \Pteranodon\Exceptions\Service\Egg\Variable\ReservedVariableNameException
      */
     public function store(StoreEggVariableRequest $request, Egg $egg): array
     {

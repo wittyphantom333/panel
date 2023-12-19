@@ -22,7 +22,7 @@ export default () => {
                 username: '',
                 password: '',
                 mailFrom: 'no-reply@example.com',
-                mailFromName: 'Pterodactyl Panel',
+                mailFromName: 'Pteranodon Panel',
             }}
         >
             {({ isSubmitting, isValid }) => (

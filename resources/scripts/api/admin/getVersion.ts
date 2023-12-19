@@ -6,7 +6,7 @@ export interface VersionData {
         latest: string;
     };
 
-    wings: {
+    buddy: {
         latest: string;
     };
 

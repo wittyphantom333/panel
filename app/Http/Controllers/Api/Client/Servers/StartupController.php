@@ -1,16 +1,16 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Client\Servers;
+namespace Pteranodon\Http\Controllers\Api\Client\Servers;
 
-use Pterodactyl\Models\Server;
-use Pterodactyl\Facades\Activity;
-use Pterodactyl\Services\Servers\StartupCommandService;
-use Pterodactyl\Repositories\Eloquent\ServerVariableRepository;
-use Pterodactyl\Transformers\Api\Client\EggVariableTransformer;
-use Pterodactyl\Http\Controllers\Api\Client\ClientApiController;
+use Pteranodon\Models\Server;
+use Pteranodon\Facades\Activity;
+use Pteranodon\Services\Servers\StartupCommandService;
+use Pteranodon\Repositories\Eloquent\ServerVariableRepository;
+use Pteranodon\Transformers\Api\Client\EggVariableTransformer;
+use Pteranodon\Http\Controllers\Api\Client\ClientApiController;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Startup\GetStartupRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Startup\UpdateStartupVariableRequest;
+use Pteranodon\Http\Requests\Api\Client\Servers\Startup\GetStartupRequest;
+use Pteranodon\Http\Requests\Api\Client\Servers\Startup\UpdateStartupVariableRequest;
 
 class StartupController extends ClientApiController
 {
@@ -47,8 +47,8 @@ class StartupController extends ClientApiController
      * Updates a single variable for a server.
      *
      * @throws \Illuminate\Validation\ValidationException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Pteranodon\Exceptions\Model\DataValidationException
+     * @throws \Pteranodon\Exceptions\Repository\RecordNotFoundException
      */
     public function update(UpdateStartupVariableRequest $request, Server $server): array
     {
@@ -61,7 +61,7 @@ class StartupController extends ClientApiController
             throw new BadRequestHttpException('The environment variable you are trying to edit is read-only.');
         }
 
-        /* @var \Pterodactyl\Models\EggVariable $variable */
+        /* @var \Pteranodon\Models\EggVariable $variable */
 
         // Revalidate the variable value using the egg variable specific validation rules for it.
         $this->validate($request, ['value' => $variable->rules]);

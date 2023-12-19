@@ -1,23 +1,23 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Eggs;
+namespace Pteranodon\Http\Controllers\Api\Application\Eggs;
 
 use Ramsey\Uuid\Uuid;
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\Nest;
+use Pteranodon\Models\Egg;
+use Pteranodon\Models\Nest;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
 use Spatie\QueryBuilder\QueryBuilder;
-use Pterodactyl\Services\Eggs\Sharing\EggExporterService;
-use Pterodactyl\Transformers\Api\Application\EggTransformer;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\GetEggRequest;
-use Pterodactyl\Exceptions\Http\QueryValueOutOfRangeHttpException;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\GetEggsRequest;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\StoreEggRequest;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\DeleteEggRequest;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\ExportEggRequest;
-use Pterodactyl\Http\Requests\Api\Application\Eggs\UpdateEggRequest;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Pteranodon\Services\Eggs\Sharing\EggExporterService;
+use Pteranodon\Transformers\Api\Application\EggTransformer;
+use Pteranodon\Http\Requests\Api\Application\Eggs\GetEggRequest;
+use Pteranodon\Exceptions\Http\QueryValueOutOfRangeHttpException;
+use Pteranodon\Http\Requests\Api\Application\Eggs\GetEggsRequest;
+use Pteranodon\Http\Requests\Api\Application\Eggs\StoreEggRequest;
+use Pteranodon\Http\Requests\Api\Application\Eggs\DeleteEggRequest;
+use Pteranodon\Http\Requests\Api\Application\Eggs\ExportEggRequest;
+use Pteranodon\Http\Requests\Api\Application\Eggs\UpdateEggRequest;
+use Pteranodon\Http\Controllers\Api\Application\ApplicationApiController;
 
 class EggController extends ApplicationApiController
 {
@@ -72,7 +72,7 @@ class EggController extends ApplicationApiController
         $merged = array_merge($validated, [
             'uuid' => Uuid::uuid4()->toString(),
             // TODO: allow this to be set in the request, and default to config value if null or not present.
-            'author' => config('pterodactyl.service.author'),
+            'author' => config('pteranodon.service.author'),
         ]);
 
         $egg = Egg::query()->create($merged);
@@ -109,7 +109,7 @@ class EggController extends ApplicationApiController
     /**
      * Exports an egg.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Pteranodon\Exceptions\Repository\RecordNotFoundException
      */
     public function export(ExportEggRequest $request, int $eggId): JsonResponse
     {

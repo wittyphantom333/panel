@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Nests;
+namespace Pteranodon\Http\Requests\Api\Application\Nests;
 
-use Pterodactyl\Models\Nest;
+use Pteranodon\Models\Nest;
 
 class UpdateNestRequest extends StoreNestRequest
 {

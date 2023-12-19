@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Services\Schedules;
+namespace Pteranodon\Services\Schedules;
 
 use Exception;
-use Pterodactyl\Models\Schedule;
+use Pteranodon\Models\Schedule;
 use Illuminate\Contracts\Bus\Dispatcher;
-use Pterodactyl\Jobs\Schedule\RunTaskJob;
+use Pteranodon\Jobs\Schedule\RunTaskJob;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Pteranodon\Exceptions\DisplayException;
+use Pteranodon\Repositories\Wings\DaemonServerRepository;
+use Pteranodon\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ProcessScheduleService
 {
@@ -33,7 +33,7 @@ class ProcessScheduleService
             throw new DisplayException('Cannot process schedule for task execution: no tasks are registered.');
         }
 
-        /* @var \Pterodactyl\Models\Task $task */
+        /* @var \Pteranodon\Models\Task $task */
         $this->connection->transaction(function () use ($schedule, $task) {
             $schedule->forceFill([
                 'is_processing' => true,
@@ -75,7 +75,7 @@ class ProcessScheduleService
             // When using dispatchNow the RunTaskJob::failed() function is not called automatically
             // so we need to manually trigger it and then continue with the exception throw.
             //
-            // @see https://github.com/pterodactyl/panel/issues/2550
+            // @see https://github.com/wittyphantom333/panel/issues/2550
             try {
                 $this->dispatcher->dispatchNow($job);
             } catch (\Exception $exception) {

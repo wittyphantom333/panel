@@ -1,5 +1,5 @@
 :8080 {
-	root * /var/www/pterodactyl/public/
+	root * /var/www/pteranodon/public/
 	file_server
 
 	header {

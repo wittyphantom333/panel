@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Events\Server;
+namespace Pteranodon\Events\Server;
 
-use Pterodactyl\Events\Event;
-use Pterodactyl\Models\Server;
+use Pteranodon\Events\Event;
+use Pteranodon\Models\Server;
 use Illuminate\Queue\SerializesModels;
 
 class Deleting extends Event

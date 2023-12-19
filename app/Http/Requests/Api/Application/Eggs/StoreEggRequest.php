@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Eggs;
+namespace Pteranodon\Http\Requests\Api\Application\Eggs;
 
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Pteranodon\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class StoreEggRequest extends ApplicationApiRequest
 {

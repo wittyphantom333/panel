@@ -1,18 +1,18 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Services\Servers;
+namespace Pteranodon\Tests\Integration\Services\Servers;
 
 use Mockery\MockInterface;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
-use Pterodactyl\Models\Database;
-use Pterodactyl\Models\DatabaseHost;
+use Pteranodon\Models\Database;
+use Pteranodon\Models\DatabaseHost;
 use GuzzleHttp\Exception\BadResponseException;
-use Pterodactyl\Tests\Integration\IntegrationTestCase;
-use Pterodactyl\Services\Servers\ServerDeletionService;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Pteranodon\Tests\Integration\IntegrationTestCase;
+use Pteranodon\Services\Servers\ServerDeletionService;
+use Pteranodon\Repositories\Wings\DaemonServerRepository;
+use Pteranodon\Services\Databases\DatabaseManagementService;
+use Pteranodon\Exceptions\Http\Connection\DaemonConnectionException;
 
 class ServerDeletionServiceTest extends IntegrationTestCase
 {
@@ -53,7 +53,7 @@ class ServerDeletionServiceTest extends IntegrationTestCase
 
     /**
      * Test that a server is not deleted if the force option is not set and an error
-     * is returned by wings.
+     * is returned by buddy.
      */
     public function testRegularDeleteFailsIfWingsReturnsError()
     {
@@ -112,7 +112,7 @@ class ServerDeletionServiceTest extends IntegrationTestCase
         $server = $this->createServerModel();
         $host = DatabaseHost::factory()->create();
 
-        /** @var \Pterodactyl\Models\Database $db */
+        /** @var \Pteranodon\Models\Database $db */
         $db = Database::factory()->create(['database_host_id' => $host->id, 'server_id' => $server->id]);
 
         $server->refresh();
@@ -137,7 +137,7 @@ class ServerDeletionServiceTest extends IntegrationTestCase
         $server = $this->createServerModel();
         $host = DatabaseHost::factory()->create();
 
-        /** @var \Pterodactyl\Models\Database $db */
+        /** @var \Pteranodon\Models\Database $db */
         $db = Database::factory()->create(['database_host_id' => $host->id, 'server_id' => $server->id]);
 
         $server->refresh();

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Roles;
+namespace Pteranodon\Http\Requests\Api\Application\Roles;
 
-use Pterodactyl\Models\AdminRole;
+use Pteranodon\Models\AdminRole;
 
 class UpdateRoleRequest extends StoreRoleRequest
 {

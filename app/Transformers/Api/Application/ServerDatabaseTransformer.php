@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Application;
+namespace Pteranodon\Transformers\Api\Application;
 
-use Pterodactyl\Models\Database;
+use Pteranodon\Models\Database;
 use League\Fractal\Resource\Item;
 use League\Fractal\Resource\NullResource;
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Services\Acl\Api\AdminAcl;
+use Pteranodon\Transformers\Api\Transformer;
 use Illuminate\Contracts\Encryption\Encrypter;
 
 class ServerDatabaseTransformer extends Transformer

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Application;
+namespace Pteranodon\Transformers\Api\Application;
 
-use Pterodactyl\Models\AdminRole;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Models\AdminRole;
+use Pteranodon\Transformers\Api\Transformer;
 
 class AdminRoleTransformer extends Transformer
 {

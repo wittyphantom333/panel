@@ -1,11 +1,11 @@
 <?php
 
-namespace Pterodactyl\Tests\Integration\Api\Client\Server\Subuser;
+namespace Pteranodon\Tests\Integration\Api\Client\Server\Subuser;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
+use Pteranodon\Models\User;
+use Pteranodon\Models\Subuser;
+use Pteranodon\Repositories\Wings\DaemonServerRepository;
+use Pteranodon\Tests\Integration\Api\Client\ClientApiIntegrationTestCase;
 
 class SubuserAuthorizationTest extends ClientApiIntegrationTestCase
 {
@@ -17,7 +17,7 @@ class SubuserAuthorizationTest extends ClientApiIntegrationTestCase
     public function testUserCannotAccessResourceBelongingToOtherServers(string $method)
     {
         // Generic subuser, the specific resource we're trying to access.
-        /** @var \Pterodactyl\Models\User $internal */
+        /** @var \Pteranodon\Models\User $internal */
         $internal = User::factory()->create();
 
         // The API $user is the owner of $server1.

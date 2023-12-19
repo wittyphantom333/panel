@@ -1,20 +1,20 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Servers\Databases;
+namespace Pteranodon\Http\Requests\Api\Application\Servers\Databases;
 
 use Illuminate\Support\Arr;
 use Webmozart\Assert\Assert;
-use Pterodactyl\Models\Server;
+use Pteranodon\Models\Server;
 use Illuminate\Validation\Rule;
 use Illuminate\Database\Query\Builder;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Pteranodon\Services\Databases\DatabaseManagementService;
+use Pteranodon\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class StoreServerDatabaseRequest extends ApplicationApiRequest
 {
     public function rules(): array
     {
-        /** @var \Pterodactyl\Models\Server $server */
+        /** @var \Pteranodon\Models\Server $server */
         $server = $this->route()->parameter('server');
 
         return [

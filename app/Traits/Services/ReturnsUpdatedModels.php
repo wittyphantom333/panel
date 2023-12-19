@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Traits\Services;
+namespace Pteranodon\Traits\Services;
 
 trait ReturnsUpdatedModels
 {

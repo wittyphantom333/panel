@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Server;
+namespace Pteranodon\Exceptions\Service\Server;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Pteranodon\Exceptions\PteranodonException;
 
-class RequiredVariableMissingException extends PterodactylException
+class RequiredVariableMissingException extends PteranodonException
 {
 }

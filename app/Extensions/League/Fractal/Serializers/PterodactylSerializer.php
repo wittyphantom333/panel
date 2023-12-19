@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Extensions\League\Fractal\Serializers;
+namespace Pteranodon\Extensions\League\Fractal\Serializers;
 
 use League\Fractal\Serializer\ArraySerializer;
 
-class PterodactylSerializer extends ArraySerializer
+class PteranodonSerializer extends ArraySerializer
 {
     /**
      * Serialize a collection.

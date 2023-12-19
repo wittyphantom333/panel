@@ -1,17 +1,17 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Pteranodon\Transformers\Api\Client;
 
-use Pterodactyl\Models\Egg;
-use Pterodactyl\Models\Server;
+use Pteranodon\Models\Egg;
+use Pteranodon\Models\Server;
 use League\Fractal\Resource\Item;
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Models\Permission;
+use Pteranodon\Models\Allocation;
+use Pteranodon\Models\Permission;
 use Illuminate\Container\Container;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Resource\NullResource;
-use Pterodactyl\Transformers\Api\Transformer;
-use Pterodactyl\Services\Servers\StartupCommandService;
+use Pteranodon\Transformers\Api\Transformer;
+use Pteranodon\Services\Servers\StartupCommandService;
 
 class ServerTransformer extends Transformer
 {
@@ -30,7 +30,7 @@ class ServerTransformer extends Transformer
      */
     public function transform(Server $server): array
     {
-        /** @var \Pterodactyl\Services\Servers\StartupCommandService $service */
+        /** @var \Pteranodon\Services\Servers\StartupCommandService $service */
         $service = Container::getInstance()->make(StartupCommandService::class);
 
         $user = $this->request->user();

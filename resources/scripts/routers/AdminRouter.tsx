@@ -16,7 +16,7 @@ import { useState } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import tw from 'twin.macro';
 
-import CollapsedIcon from '@/assets/images/pterodactyl.svg';
+import CollapsedIcon from '@/assets/images/pteranodon.svg';
 import OverviewContainer from '@/components/admin/overview/OverviewContainer';
 import SettingsContainer from '@/components/admin/settings/SettingsContainer';
 import DatabasesContainer from '@/components/admin/databases/DatabasesContainer';
@@ -66,7 +66,7 @@ function AdminRouter() {
                     {!collapsed ? (
                         <h1 css={tw`text-2xl text-neutral-50 whitespace-nowrap font-medium`}>{applicationName}</h1>
                     ) : (
-                        <img src={CollapsedIcon} css={tw`mt-4 w-20`} alt={'Pterodactyl Icon'} />
+                        <img src={CollapsedIcon} css={tw`mt-4 w-20`} alt={'Pteranodon Icon'} />
                     )}
                 </div>
                 <Sidebar.Wrapper>

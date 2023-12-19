@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Pteranodon\Transformers\Api\Client;
 
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Transformers\Api\Transformer;
+use Pteranodon\Models\Allocation;
+use Pteranodon\Transformers\Api\Transformer;
 
 class AllocationTransformer extends Transformer
 {

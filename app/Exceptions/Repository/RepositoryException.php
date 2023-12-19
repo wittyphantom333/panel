@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Repository;
+namespace Pteranodon\Exceptions\Repository;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Pteranodon\Exceptions\PteranodonException;
 
-class RepositoryException extends PterodactylException
+class RepositoryException extends PteranodonException
 {
 }

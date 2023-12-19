@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Pteranodon\Models;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Yaml\Yaml;
@@ -42,7 +42,7 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property Allocation[]|Collection $allocations
- * @property \Pterodactyl\Models\DatabaseHost|null $databaseHost
+ * @property \Pteranodon\Models\DatabaseHost|null $databaseHost
  * @property Location $location
  * @property Mount[]|Collection $mounts
  * @property int[]|\Illuminate\Support\Collection $ports
@@ -61,7 +61,7 @@ class Node extends Model
     /**
      * The default location of server files on the Wings instance.
      */
-    public const DEFAULT_DAEMON_BASE = '/var/lib/pterodactyl/volumes';
+    public const DEFAULT_DAEMON_BASE = '/var/lib/pteranodon/volumes';
 
     public const DAEMON_TOKEN_ID_LENGTH = 16;
     public const DAEMON_TOKEN_LENGTH = 64;

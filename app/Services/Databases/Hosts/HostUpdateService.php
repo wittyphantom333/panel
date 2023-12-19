@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Services\Databases\Hosts;
+namespace Pteranodon\Services\Databases\Hosts;
 
-use Pterodactyl\Models\DatabaseHost;
+use Pteranodon\Models\DatabaseHost;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Contracts\Encryption\Encrypter;
-use Pterodactyl\Extensions\DynamicDatabaseConnection;
-use Pterodactyl\Contracts\Repository\DatabaseHostRepositoryInterface;
+use Pteranodon\Extensions\DynamicDatabaseConnection;
+use Pteranodon\Contracts\Repository\DatabaseHostRepositoryInterface;
 
 class HostUpdateService
 {

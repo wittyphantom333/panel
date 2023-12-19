@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Roles;
+namespace Pteranodon\Http\Controllers\Api\Application\Roles;
 
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Models\AdminRole;
+use Pteranodon\Models\AdminRole;
 use Spatie\QueryBuilder\QueryBuilder;
-use Pterodactyl\Exceptions\Http\QueryValueOutOfRangeHttpException;
-use Pterodactyl\Transformers\Api\Application\AdminRoleTransformer;
-use Pterodactyl\Http\Requests\Api\Application\Roles\GetRoleRequest;
-use Pterodactyl\Http\Requests\Api\Application\Roles\GetRolesRequest;
-use Pterodactyl\Http\Requests\Api\Application\Roles\StoreRoleRequest;
-use Pterodactyl\Http\Requests\Api\Application\Roles\DeleteRoleRequest;
-use Pterodactyl\Http\Requests\Api\Application\Roles\UpdateRoleRequest;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
+use Pteranodon\Exceptions\Http\QueryValueOutOfRangeHttpException;
+use Pteranodon\Transformers\Api\Application\AdminRoleTransformer;
+use Pteranodon\Http\Requests\Api\Application\Roles\GetRoleRequest;
+use Pteranodon\Http\Requests\Api\Application\Roles\GetRolesRequest;
+use Pteranodon\Http\Requests\Api\Application\Roles\StoreRoleRequest;
+use Pteranodon\Http\Requests\Api\Application\Roles\DeleteRoleRequest;
+use Pteranodon\Http\Requests\Api\Application\Roles\UpdateRoleRequest;
+use Pteranodon\Http\Controllers\Api\Application\ApplicationApiController;
 
 class RoleController extends ApplicationApiController
 {

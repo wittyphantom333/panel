@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Mounts;
+namespace Pteranodon\Http\Requests\Api\Application\Mounts;
 
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Pteranodon\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class DeleteMountRequest extends ApplicationApiRequest
 {

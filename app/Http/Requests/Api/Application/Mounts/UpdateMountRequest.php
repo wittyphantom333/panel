@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Mounts;
+namespace Pteranodon\Http\Requests\Api\Application\Mounts;
 
-use Pterodactyl\Models\Mount;
+use Pteranodon\Models\Mount;
 
 class UpdateMountRequest extends StoreMountRequest
 {

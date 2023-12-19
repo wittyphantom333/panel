@@ -20,7 +20,7 @@ const ServerRouter = lazy(() => import('@/routers/ServerRouter'));
 
 interface ExtendedWindow extends Window {
     SiteConfiguration?: SiteSettings;
-    PterodactylUser?: {
+    PteranodonUser?: {
         uuid: string;
         username: string;
         email: string;
@@ -39,19 +39,19 @@ interface ExtendedWindow extends Window {
 // setupInterceptors(history);
 
 function App() {
-    const { PterodactylUser, SiteConfiguration } = window as ExtendedWindow;
-    if (PterodactylUser && !store.getState().user.data) {
+    const { PteranodonUser, SiteConfiguration } = window as ExtendedWindow;
+    if (PteranodonUser && !store.getState().user.data) {
         store.getActions().user.setUserData({
-            uuid: PterodactylUser.uuid,
-            username: PterodactylUser.username,
-            email: PterodactylUser.email,
-            language: PterodactylUser.language,
-            rootAdmin: PterodactylUser.root_admin,
-            avatarURL: PterodactylUser.avatar_url,
-            roleName: PterodactylUser.admin_role_name,
-            useTotp: PterodactylUser.use_totp,
-            createdAt: new Date(PterodactylUser.created_at),
-            updatedAt: new Date(PterodactylUser.updated_at),
+            uuid: PteranodonUser.uuid,
+            username: PteranodonUser.username,
+            email: PteranodonUser.email,
+            language: PteranodonUser.language,
+            rootAdmin: PteranodonUser.root_admin,
+            avatarURL: PteranodonUser.avatar_url,
+            roleName: PteranodonUser.admin_role_name,
+            useTotp: PteranodonUser.use_totp,
+            createdAt: new Date(PteranodonUser.created_at),
+            updatedAt: new Date(PteranodonUser.updated_at),
         });
     }
 
