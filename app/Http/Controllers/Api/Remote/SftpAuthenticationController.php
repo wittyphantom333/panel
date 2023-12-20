@@ -2,11 +2,11 @@
 
 namespace Pteranodon\Http\Controllers\Api\Remote;
 
-use Illuminate\Http\Request;
 use Pteranodon\Models\User;
+use Illuminate\Http\Request;
 use Pteranodon\Models\Server;
-use Illuminate\Http\JsonResponse;
 use Pteranodon\Facades\Activity;
+use Illuminate\Http\JsonResponse;
 use Pteranodon\Models\Permission;
 use phpseclib3\Crypt\PublicKeyLoader;
 use Pteranodon\Http\Controllers\Controller;

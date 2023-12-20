@@ -4,8 +4,8 @@ namespace Pteranodon\Services\Allocations;
 
 use IPTools\Network;
 use Pteranodon\Models\Node;
-use Illuminate\Database\ConnectionInterface;
 use Pteranodon\Exceptions\DisplayException;
+use Illuminate\Database\ConnectionInterface;
 use Pteranodon\Contracts\Repository\AllocationRepositoryInterface;
 use Pteranodon\Exceptions\Service\Allocation\CidrOutOfRangeException;
 use Pteranodon\Exceptions\Service\Allocation\PortOutOfRangeException;

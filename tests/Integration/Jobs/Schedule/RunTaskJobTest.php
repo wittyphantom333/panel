@@ -4,8 +4,8 @@ namespace Pteranodon\Tests\Integration\Jobs\Schedule;
 
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
-use GuzzleHttp\Psr7\Request;
 use Pteranodon\Models\Task;
+use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use Pteranodon\Models\Server;
 use Pteranodon\Models\Schedule;

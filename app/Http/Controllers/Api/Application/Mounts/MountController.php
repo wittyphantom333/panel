@@ -2,8 +2,8 @@
 
 namespace Pteranodon\Http\Controllers\Api\Application\Mounts;
 
-use Illuminate\Http\Response;
 use Pteranodon\Models\Mount;
+use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
 use Spatie\QueryBuilder\QueryBuilder;
 use Pteranodon\Transformers\Api\Application\MountTransformer;

@@ -3,8 +3,8 @@
 namespace Pteranodon\Extensions\Spatie\Fractalistic;
 
 use League\Fractal\Scope;
-use Spatie\Fractal\Fractal as SpatieFractal;
 use Pteranodon\Transformers\Api\Transformer;
+use Spatie\Fractal\Fractal as SpatieFractal;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use League\Fractal\Pagination\IlluminatePaginatorAdapter;
 use Pteranodon\Extensions\League\Fractal\Serializers\PteranodonSerializer;

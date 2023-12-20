@@ -1,8 +1,8 @@
 <?php
 
+use Pteranodon\Models\Permission;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use Pteranodon\Models\Permission;
 use Illuminate\Support\Facades\Schema;
 use Pteranodon\Models\Permission as P;
 use Illuminate\Database\Schema\Blueprint;

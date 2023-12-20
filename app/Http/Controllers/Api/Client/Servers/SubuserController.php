@@ -4,8 +4,8 @@ namespace Pteranodon\Http\Controllers\Api\Client\Servers;
 
 use Illuminate\Http\Request;
 use Pteranodon\Models\Server;
-use Illuminate\Http\JsonResponse;
 use Pteranodon\Facades\Activity;
+use Illuminate\Http\JsonResponse;
 use Pteranodon\Models\Permission;
 use Illuminate\Support\Facades\Log;
 use Pteranodon\Repositories\Eloquent\SubuserRepository;

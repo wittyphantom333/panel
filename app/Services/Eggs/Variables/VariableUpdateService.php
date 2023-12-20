@@ -2,8 +2,8 @@
 
 namespace Pteranodon\Services\Eggs\Variables;
 
-use Illuminate\Support\Str;
 use Pteranodon\Models\Egg;
+use Illuminate\Support\Str;
 use Pteranodon\Models\EggVariable;
 use Pteranodon\Exceptions\DisplayException;
 use Pteranodon\Traits\Services\ValidatesValidationRules;

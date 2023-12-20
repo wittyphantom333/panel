@@ -6,8 +6,8 @@ use Exception;
 use Pteranodon\Models\Schedule;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Pteranodon\Jobs\Schedule\RunTaskJob;
-use Illuminate\Database\ConnectionInterface;
 use Pteranodon\Exceptions\DisplayException;
+use Illuminate\Database\ConnectionInterface;
 use Pteranodon\Repositories\Wings\DaemonServerRepository;
 use Pteranodon\Exceptions\Http\Connection\DaemonConnectionException;
 

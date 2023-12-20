@@ -3,13 +3,13 @@
 namespace Pteranodon\Services\Servers;
 
 use Ramsey\Uuid\Uuid;
-use Illuminate\Support\Arr;
 use Pteranodon\Models\Egg;
+use Illuminate\Support\Arr;
 use Pteranodon\Models\User;
 use Webmozart\Assert\Assert;
 use Pteranodon\Models\Server;
-use Illuminate\Support\Collection;
 use Pteranodon\Models\Allocation;
+use Illuminate\Support\Collection;
 use Illuminate\Database\ConnectionInterface;
 use Pteranodon\Models\Objects\DeploymentObject;
 use Pteranodon\Repositories\Eloquent\ServerRepository;

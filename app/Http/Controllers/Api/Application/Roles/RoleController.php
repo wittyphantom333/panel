@@ -3,8 +3,8 @@
 namespace Pteranodon\Http\Controllers\Api\Application\Roles;
 
 use Illuminate\Http\Response;
-use Illuminate\Http\JsonResponse;
 use Pteranodon\Models\AdminRole;
+use Illuminate\Http\JsonResponse;
 use Spatie\QueryBuilder\QueryBuilder;
 use Pteranodon\Exceptions\Http\QueryValueOutOfRangeHttpException;
 use Pteranodon\Transformers\Api\Application\AdminRoleTransformer;

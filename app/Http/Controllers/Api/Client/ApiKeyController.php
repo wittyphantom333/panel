@@ -3,8 +3,8 @@
 namespace Pteranodon\Http\Controllers\Api\Client;
 
 use Pteranodon\Models\ApiKey;
-use Illuminate\Http\JsonResponse;
 use Pteranodon\Facades\Activity;
+use Illuminate\Http\JsonResponse;
 use Pteranodon\Exceptions\DisplayException;
 use Pteranodon\Http\Requests\Api\Client\ClientApiRequest;
 use Pteranodon\Transformers\Api\Client\ApiKeyTransformer;

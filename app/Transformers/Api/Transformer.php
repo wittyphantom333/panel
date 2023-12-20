@@ -4,8 +4,8 @@ namespace Pteranodon\Transformers\Api;
 
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
-use Illuminate\Http\Request;
 use Pteranodon\Models\User;
+use Illuminate\Http\Request;
 use Webmozart\Assert\Assert;
 use League\Fractal\Resource\Item;
 use Illuminate\Container\Container;

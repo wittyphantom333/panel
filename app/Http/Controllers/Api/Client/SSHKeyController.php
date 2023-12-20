@@ -2,8 +2,8 @@
 
 namespace Pteranodon\Http\Controllers\Api\Client;
 
-use Illuminate\Http\JsonResponse;
 use Pteranodon\Facades\Activity;
+use Illuminate\Http\JsonResponse;
 use Pteranodon\Http\Requests\Api\Client\ClientApiRequest;
 use Pteranodon\Transformers\Api\Client\UserSSHKeyTransformer;
 use Pteranodon\Http\Requests\Api\Client\Account\StoreSSHKeyRequest;

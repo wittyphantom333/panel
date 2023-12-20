@@ -5,8 +5,8 @@ namespace Pteranodon\Services\Servers;
 use Pteranodon\Models\User;
 use Illuminate\Support\Collection;
 use Pteranodon\Models\EggVariable;
-use Illuminate\Validation\ValidationException;
 use Pteranodon\Traits\Services\HasUserLevels;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 
 class VariableValidatorService

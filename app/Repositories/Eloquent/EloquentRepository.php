@@ -11,9 +11,9 @@ use Pteranodon\Repositories\Repository;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Pteranodon\Contracts\Repository\RepositoryInterface;
 use Pteranodon\Exceptions\Model\DataValidationException;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Pteranodon\Exceptions\Repository\RecordNotFoundException;
 
 abstract class EloquentRepository extends Repository implements RepositoryInterface

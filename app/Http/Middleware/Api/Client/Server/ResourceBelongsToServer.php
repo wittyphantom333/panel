@@ -2,9 +2,9 @@
 
 namespace Pteranodon\Http\Middleware\Api\Client\Server;
 
-use Illuminate\Http\Request;
 use Pteranodon\Models\Task;
 use Pteranodon\Models\User;
+use Illuminate\Http\Request;
 use Pteranodon\Models\Backup;
 use Pteranodon\Models\Server;
 use Pteranodon\Models\Subuser;

@@ -2,8 +2,8 @@
 
 namespace Pteranodon\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use Pteranodon\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Auth\AuthManager;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Auth\Events\Failed;

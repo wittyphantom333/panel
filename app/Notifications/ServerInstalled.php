@@ -3,8 +3,8 @@
 namespace Pteranodon\Notifications;
 
 use Pteranodon\Models\User;
-use Illuminate\Bus\Queueable;
 use Pteranodon\Events\Event;
+use Illuminate\Bus\Queueable;
 use Pteranodon\Models\Server;
 use Illuminate\Container\Container;
 use Pteranodon\Events\Server\Installed;

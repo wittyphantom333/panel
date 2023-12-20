@@ -6,8 +6,8 @@ use Ramsey\Uuid\Uuid;
 use Pteranodon\Models\User;
 use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Database\ConnectionInterface;
-use Illuminate\Contracts\Auth\PasswordBroker;
 use Pteranodon\Notifications\AccountCreated;
+use Illuminate\Contracts\Auth\PasswordBroker;
 use Pteranodon\Contracts\Repository\UserRepositoryInterface;
 
 class UserCreationService

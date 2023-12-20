@@ -120,7 +120,7 @@ class AppSettingsCommand extends Command
         }
 
         $this->output->comment('Please reference https://pteranodon.io/panel/1.0/additional_configuration.html#telemetry for more detailed information regarding telemetry data and collection.');
-        $this->variables['PTERODACTYL_TELEMETRY_ENABLED'] = $this->option('telemetry') ?? $this->confirm(
+        $this->variables['PTERANODON_TELEMETRY_ENABLED'] = $this->option('telemetry') ?? $this->confirm(
             'Enable sending anonymous telemetry data?',
             config('pteranodon.telemetry.enabled', true)
         ) ? 'true' : 'false';
