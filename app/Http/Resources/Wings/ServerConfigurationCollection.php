@@ -4,8 +4,8 @@ namespace Pteranodon\Http\Resources\Wings;
 
 use Pteranodon\Models\Server;
 use Illuminate\Container\Container;
-use Illuminate\Http\Resources\Json\ResourceCollection;
 use Pteranodon\Services\Eggs\EggConfigurationService;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 use Pteranodon\Services\Servers\ServerConfigurationStructureService;
 
 class ServerConfigurationCollection extends ResourceCollection

@@ -2,8 +2,8 @@
 
 namespace Pteranodon\Services\Servers;
 
-use Illuminate\Support\Arr;
 use Pteranodon\Models\Egg;
+use Illuminate\Support\Arr;
 use Pteranodon\Models\User;
 use Pteranodon\Models\Server;
 use Pteranodon\Models\ServerVariable;

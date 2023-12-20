@@ -4,8 +4,8 @@ namespace Pteranodon\Http\Controllers\Api\Client\Servers;
 
 use Illuminate\Http\Response;
 use Pteranodon\Models\Server;
-use Illuminate\Http\JsonResponse;
 use Pteranodon\Facades\Activity;
+use Illuminate\Http\JsonResponse;
 use Pteranodon\Repositories\Eloquent\ServerRepository;
 use Pteranodon\Services\Servers\ReinstallServerService;
 use Pteranodon\Http\Controllers\Api\Client\ClientApiController;

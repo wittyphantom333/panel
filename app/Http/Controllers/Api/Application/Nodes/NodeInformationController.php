@@ -4,8 +4,8 @@ namespace Pteranodon\Http\Controllers\Api\Application\Nodes;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use Pteranodon\Models\Node;
+use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Cache\Repository as CacheRepository;
 use Pteranodon\Repositories\Wings\DaemonConfigurationRepository;

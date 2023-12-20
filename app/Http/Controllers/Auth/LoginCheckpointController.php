@@ -9,8 +9,8 @@ use Illuminate\Http\JsonResponse;
 use PragmaRX\Google2FA\Google2FA;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Contracts\Encryption\Encrypter;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Pteranodon\Events\Auth\ProvidedAuthenticationToken;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Pteranodon\Http\Requests\Auth\LoginCheckpointRequest;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 

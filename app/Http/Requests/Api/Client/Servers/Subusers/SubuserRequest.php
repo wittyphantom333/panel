@@ -2,8 +2,8 @@
 
 namespace Pteranodon\Http\Requests\Api\Client\Servers\Subusers;
 
-use Illuminate\Http\Request;
 use Pteranodon\Models\User;
+use Illuminate\Http\Request;
 use Pteranodon\Models\Subuser;
 use Pteranodon\Exceptions\Http\HttpForbiddenException;
 use Pteranodon\Http\Requests\Api\Client\ClientApiRequest;

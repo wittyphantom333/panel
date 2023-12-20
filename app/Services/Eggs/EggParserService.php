@@ -2,8 +2,8 @@
 
 namespace Pteranodon\Services\Eggs;
 
-use Illuminate\Support\Arr;
 use Pteranodon\Models\Egg;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Pteranodon\Exceptions\Service\InvalidFileUploadException;
 

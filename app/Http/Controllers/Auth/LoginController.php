@@ -4,10 +4,10 @@ namespace Pteranodon\Http\Controllers\Auth;
 
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use Pteranodon\Models\User;
-use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Pteranodon\Facades\Activity;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 

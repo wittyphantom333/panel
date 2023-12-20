@@ -3,14 +3,14 @@
 namespace Pteranodon\Services\Eggs\Sharing;
 
 use Ramsey\Uuid\Uuid;
-use Illuminate\Support\Arr;
 use Pteranodon\Models\Egg;
+use Illuminate\Support\Arr;
 use Pteranodon\Models\Nest;
 use Symfony\Component\Yaml\Yaml;
 use Illuminate\Http\UploadedFile;
 use Pteranodon\Models\EggVariable;
-use Illuminate\Database\ConnectionInterface;
 use Pteranodon\Exceptions\DisplayException;
+use Illuminate\Database\ConnectionInterface;
 use Pteranodon\Services\Eggs\EggParserService;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Pteranodon\Exceptions\Service\Egg\BadJsonFormatException;

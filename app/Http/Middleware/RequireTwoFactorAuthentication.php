@@ -3,8 +3,8 @@
 namespace Pteranodon\Http\Middleware;
 
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
 use Pteranodon\Models\User;
+use Illuminate\Http\Request;
 use Pteranodon\Exceptions\Http\TwoFactorAuthRequiredException;
 
 class RequireTwoFactorAuthentication

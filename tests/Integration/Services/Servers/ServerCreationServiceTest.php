@@ -4,9 +4,9 @@ namespace Pteranodon\Tests\Integration\Services\Servers;
 
 use Mockery\MockInterface;
 use Pteranodon\Models\Egg;
-use GuzzleHttp\Psr7\Request;
 use Pteranodon\Models\Node;
 use Pteranodon\Models\User;
+use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use Pteranodon\Models\Server;
 use Pteranodon\Models\Location;
